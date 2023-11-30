@@ -8,7 +8,8 @@ try:
         size = width, height = a, b
         screen = pygame.display.set_mode(size)
         while pygame.event.wait().type != pygame.QUIT:
-            pygame.draw.rect(screen, pygame.Color('red'), (a + 1, b + 1, a - 2, b - 2), width=0)
+            screen.fill((0, 0, 0))
+            screen.fill(pygame.Color('red'), (1, 1, width - 2, height - 2))
             pygame.display.flip()
         pygame.quit()
 except:
